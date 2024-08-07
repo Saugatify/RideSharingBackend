@@ -1,0 +1,8 @@
+Make the user route, rider route 
+rider route is accessible by rider
+user route is accessible by user only
+user and rider db schema
+login logic
+logic to show notification if any of them select either
+
+//might to add the webrtc to make them chat for the same, generating the space chat
