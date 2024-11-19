@@ -5,8 +5,10 @@ import Rider from "../models/riderModel.js"
 import jwt from "jsonwebtoken";
 
 
+//@user/register
+
 const registerUser = asyncHandler(async (req, res) => {
-    const { name, email, password, location, destination } = req.body;
+    const { name, email, password, location, destination,role } = req.body;
 
     // Validate input fields
     if (!name || !email || !password || !location || !destination) {
@@ -23,6 +25,7 @@ const registerUser = asyncHandler(async (req, res) => {
         name,
         email,
         password: hashedPassword,
+        role,
         location,
         destination
     });
@@ -32,6 +35,7 @@ const registerUser = asyncHandler(async (req, res) => {
             _id: newUser._id,
             name: newUser.name,
             email: newUser.email,
+            role:newUser.role,
             location: newUser.location,
             destination: newUser.destination
         });
@@ -43,7 +47,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
 
 //@desc Login a user
-//@route POST /api/users/login
+//@route POST /user/login
 //@access public
 const loginUser = asyncHandler(async (req, res, next) => {
   const { email, password } = req.body;
@@ -71,6 +75,8 @@ const loginUser = asyncHandler(async (req, res, next) => {
 },
 );
 
+
+//@user/getriders
 
 
   const getRiderData = asyncHandler(async (req, res) => {

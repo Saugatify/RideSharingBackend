@@ -5,4 +5,24 @@ user and rider db schema
 login logic
 logic to show notification if any of them select either
 
+
+
+user can register 
+rider can register
+
+role determination
+
+for the user log we can use the ctx for the same
+
+
+user can see the rider
+rider can see the user
+
+
+
 //might to add the webrtc to make them chat for the same, generating the space chat
+
+
+if the passenger  select the rider
+or sends the api at the same,
+passenger model will have notification with the details of the rider,(for this context need to used)

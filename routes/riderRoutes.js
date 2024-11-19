@@ -1,14 +1,14 @@
 import express from "express"
 const router = express.Router();
 import riderControllers from "../controllers/riderControllers.js"
-
+import validateToken from "../middleware/validateToken.js";
 
 router.post("/register",riderControllers.registerRider)
 
-router.post("/login",(req,res)=>{
-    console.log("Rider is loggedin");
-})
+router.post("/login",riderControllers.riderlogin)
+router.get("/getalluser",validateToken,riderControllers.getAllUser)
 
-router.get("/getuser",riderControllers.getUserData)
+
+router.get("/getuser",validateToken,riderControllers.getUserData)
 
 export default router

@@ -17,11 +17,17 @@ const riderSchema = mongoose.Schema(
         type: String,
         required: [true, "Please add the location"]
     },
+    role:{
+      type:String,
+      default:"rider",
+    },
     destination:{
         type: String,
         required: [true, "Please add the location"]
     },
-
+    status:{
+      type:[],
+    }
   },
 
   {

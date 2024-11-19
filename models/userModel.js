@@ -17,10 +17,18 @@ const userSchema = mongoose.Schema(
         type: String,
         required: [true, "Please add the location"]
     },
+    role:{
+      type:String,
+      default:"user",
+    },
     destination:{
         type: String,
         required: [true, "Please add the location"]
     },
+
+    status:{
+      type:[]
+    }
 
   },
 
